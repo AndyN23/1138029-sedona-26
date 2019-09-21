@@ -1,0 +1,163 @@
+/*css style of Sedona*/
+body {
+margin: 0;
+padding: 0;
+
+font-family: 'PT Sans', sans-serif;
+font-size: 14px;
+color: #000000;
+line-height: 24px;
+font-weight: 700;
+text-transform: uppercase;
+
+background-color: #f2f2f2;
+}
+
+.wrapper{
+position: absolute;
+width: 90%;
+margin-left:5%;
+top:0%;
+background-color:#ffffff;
+box-shadow:0 0.3em 1em #dbdbdb;
+}
+
+nav{
+line-height:40px;
+list-style: none;
+width:100%;
+justify-content: space-around;
+} 
+
+ul{
+list-style: none;
+
+}
+
+a {
+text-decoration: none;
+}
+.main-header-logo {
+padding:0;
+margin: 0;
+display: flex;
+justify-content: center; 
+}
+
+.left-navigation {
+float:left;
+margin: 20px;
+}
+.right-navigation {
+float: right;
+margin: 20px;
+}
+
+.main-picture{
+background-color: #375466 ;
+background-image: url("../img/canyon.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+h1{
+visibility: hidden;
+}
+.welcome{
+display:block;
+margin:auto;
+position: center center;
+}
+.polygon {
+width: 100%; 
+}
+
+/* Вероятно надо прописать индекс для наложения блока на фоновую картинку
+*/
+.title { 
+background-color: #ffffff;
+background-position: center center;
+margin: 0;
+padding: 10px;
+text-align: center;
+}
+p{
+font-size: 14px;
+font-weight: 200;
+}
+
+.line1, .line3{
+margin: 0;
+display: flex;
+justify-content: flex-start;
+height:257px;
+}
+.reason1, .reason2{
+background-color: #81b3d2;
+color: #ffffff;
+text-align: center;
+width: 33%;
+}
+.reason1, .reason2 span{
+margin-top: 20px;
+}
+.line2{
+display: flex;
+justify-content: space-evenly;
+height: 331px;
+background-color: #ffffff;
+}
+.block{
+margin:40px;;
+text-align: center; 
+}
+.line4{
+display: flex;
+justify-content: space-evenly;
+height: 260px;
+background-color: #eeeeee;
+}
+.reason3, .reason4, .reason5{
+margin:40px;;
+text-align: center; 
+}
+
+.reserve{
+height: 295px;
+text-align: center;
+}
+.interesting{
+font-size: 22px;
+}
+
+
+
+iframe{
+height:470px;
+width: 100%;
+}
+
+footer{
+height: 120px;
+display: flex;
+justify-content: space-evenly;
+}
+
+.visit, .social, .academy {
+text-align: center; 
+}
+
+.social{
+display: flex;
+justify-content: space-evenly;
+}
+
+.icon{
+border: 1px solid;
+border-color: #81b3d2;
+background-color: #81b3d2;
+width: 22px;
+height: 22px;
+padding:8px;
+margin-top: 50%;
+}

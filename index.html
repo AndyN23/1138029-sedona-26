@@ -3,38 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
+    <div class="wrapper">
     <header>
-      <nav>
-        <ul>
-          <li><a href="#" aria-label="Information about city"> Информация </a></li>
-          <li><a href="#" aria-label="Photo and video"> Фото и видео</a></li>
-          <li><a href="#" aria-label="Мар оf state">Карта штата</a></li>
-          <li><a href="hotels.html" aria-label="Hotels">Гостиницы</a></li>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a class="left-navigation" href="#" aria-label="Information about city"> Информация </a></li>
+          <li><a class="left-navigation" href="#" aria-label="Photo and video"> Фото и видео</a></li>
+          <li><a class="right-navigation" href="#" aria-label="Мар оf state">Карта штата</a></li>
+          <li><a class="right-navigation" href="hotels.html" aria-label="Hotels">Гостиницы</a></li>
+
         </ul>
-        <a href="index.html">
-          <img src="img/svg/logo-sedona.svg" width= "120px" type="logo" alt="Логотип Седона">  
+        <a class="main-header-logo" href="index.html" aria-label="Main page">
+          <img src="img/svg/logo-sedona.svg" width= "120px" type="logo" alt="Logo of Sedona">  
         </a>
       </nav>     
     </header>
 
     <main>
 
-      <section>
-        <h1>The best place for the rest is Sedona</h1>
+
+      <section class="main-picture">
+        <h1>The best place for the rest is Sedona</h1> <!--Hidden-->
         <!--<img src="img/canyon.jpg" width="1240" height="500" alt="Основная картинка-каньон">-->
-        <img src="img/svg/welcome.svg" width="500" height="300" alt="Welcome to the gorgeus">
-        <img src="img/svg/polygon.svg" width="1240" height="300" alt="polygon"> 
+        <img class="welcome" src="img/svg/welcome.svg" width="500" height="300" alt="Welcome to the gorgeus">
+        <img class="polygon" src="img/svg/polygon.svg" width="1240" height="300" alt="polygon"> 
+        <!--Попробовал перенести секцию в блок повыше чтоб закрывала нижнюю часть картинки-->
+        <div class="title">
+          <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+          <p>
+            Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2>Седона - небольшой городок в Аризоне заслуживающий большего!</h2>
+      <!--<section class="title">
+        <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
         <p>
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
-      </section>
+      </section>-->
+
 
       <section>
         <!-- Тут будут причины 5 штуки скорее всего таблица. Пока выделенно красным - не трогаем-->
@@ -105,6 +118,11 @@
           </div>
         </div>
         <div class="line3"><!--3 блок-линия-->
+
+          <div class="picture2">
+            <img src="img/picture2.png" alt="canyon">
+          </div>
+
           <div class="reason2" width="400px">
             <ul>
               <li>
@@ -120,16 +138,17 @@
               </li>
               <li>
                 <p>
-                  Седона - не аттракцион для туристов,<br>
-                  там течет своя жизнь
+
+                  Да, по нему можно пройти! Если конечно<br>
+                  вы осмелитесь
+
                 </p>
               </li>
             </ul>
           </div>
-          <div class="picture2">
-            <img src="img/picture2.png" alt="canyon">
-          </div>
-        </div>
+
+         </div>
+
         <div class="line4"><!--4 блок-линия-->
           <div class="reason3" width="400px">
             <ul>
@@ -197,16 +216,35 @@
         </div>
       </section>
 
-      <section>
-        <h3>Заинтересовались?</h3>
+
+      <section class="reserve">
+        <h3 class="interesting">Заинтересовались?</h3>
+
         <p>
-          Укажите предполагаемые даты поездки, и мы покажем лучшие предложения госиниц в Седоне
+          Укажите предполагаемые даты поездки, <br>и мы покажем лучшие предложения госиниц в Седоне
         </p>
         <!--доделать кнопку с выплывающим списком дат-сделаю вечером как приеду домой)))-->
         <input type="button" value="Поиск гостиницы в Седоне">
+          <form action="" method="post">
+            <!--Дата заезда-->
+            <label for="arrivel date">Дата заезда</label>
+            <input type="date" name="arrivel date">
+            <!--Дата выезда-->
+            <label for="departure date">Дата Выезда</label>
+            <input type="date" name="departure date">
+            <!--Взрослые-->  
+            <label for="adults">Взрослые</label>
+            <input type="number" min="1" max="10" step="1" id="adults" name="adults">
+            <!--Дети-->
+            <label for="childs">Взрослые</label>
+            <input type="number" min="1" max="10" step="1" id="childs" name="childs">
+            <button type="submit">Найти</button>    
+          </form>
       </section>
 
-      <section>
+
+      <section class="map">
+
         <!--map СМОТРЕТЬ ПУНКТ 3.13 тз--> 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52384.55263588516!2d-111.78998927661881!3d34.85535944108685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1568100572277!5m2!1sru!2sru" width="650px" height="400px" alt="Седона на карте гугл"></iframe>
       </section>
@@ -214,25 +252,27 @@
     </main>
 
     <footer> 
-      <div>
+      <div class="Visit">
         <p>
           #Visitsedona
         </p>
       </div>
 
-      <div><!--ССылки на соцсети-->
-        <ul>
-          <li><a href="https://twitter.com/"><img src="img/svg/twitter.svg" width="50px" alt="Sedona in Twitter"></a></li>
-          <li><a href="https://www.facebook.com/"><img src="img/svg/fb-icon.svg" width="50px" alt="Sedona in Facebook"></a></li>
-          <li><a href="https://www.youtube.com/"><img src="img/svg/youtube.svg" width="50px" alt="Sedona in Youtube"></a></li>
+
+      <div class="social-block"><!--ССылки на соцсети-->
+        <ul class="social">
+          <li><a href="https://twitter.com/"><img class="icon" src="img/svg/twitter.svg" width="50px" alt="Sedona in Twitter"></a></li>
+          <li><a href="https://www.facebook.com/"><img class="icon" src="img/svg/fb-icon.svg" width="50px" alt="Sedona in Facebook"></a></li>
+          <li><a href="https://www.youtube.com/"><img class="icon" src="img/svg/youtube.svg" width="50px" alt="Sedona in Youtube"></a></li>
          </ul>
       </div>
-      <div>
+      <div class="academy">
         <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML academy site">
-          <img src="img/svg/logo-htmlacademy.svg" width="200px" alt="logo_html_academy">
+          Website by<img src="img/svg/logo-htmlacademy.svg" width="200px" alt="logo_html_academy">
         </a>
       </div>
     </footer>
-    
+  </div>
+
   </body>
 </html>
