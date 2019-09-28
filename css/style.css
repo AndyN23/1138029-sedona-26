@@ -3,7 +3,7 @@ body {
 margin: 0;
 padding: 0;
 
-font-family: 'PT Sans', sans-serif;
+font-family: 'PT Sans', 'Verdana', sans-serif;
 font-size: 14px;
 color: #000000;
 line-height: 24px;
@@ -13,26 +13,38 @@ text-transform: uppercase;
 background-color: #f2f2f2;
 }
 
+a {
+text-decoration: none;
+}
+    
+h3{
+font-size: 21px;
+}
+
+li{
+list-style: none;
+}
 /*обертка + тень*/
 .wrapper{
 position: absolute;
 width: 1200px;
-margin-left:5%;
+margin-left:4%;
 top:0%;
 background-color:#ffffff;
-box-shadow:0 0.3em 1em #dbdbdb;
+box-shadow:0 7px 8px #dbdbdb;
 }
 
+/*----------Header's style-------------*/
 header{
-max-height: 40px;
+max-height: 39px;
 }
 
-/*навигация*/
+/*Меню навигации*/
 nav{
-line-height:56px;
+min-height:55px;
 list-style: none;
 width:100%;
-justify-content: space-evenly;
+position: relative;
 } 
 
 .site-navigation{
@@ -40,12 +52,11 @@ padding:0;
 margin: 0;
 list-style: none;
 display: flex;
-justify-content: space-between; 
+justify-content: space-around;
 }
 
 .site-navigation li{
-flex-basis:30%;
-line-height:56px;
+line-height:53px;
 }
 
 .nav-left, .nav-right {
@@ -58,23 +69,19 @@ color: #81b3d2;
 color: #b2b2b2;
 }
 
-a {
-text-decoration: none;
-}
-
-h3{
-font-size: 20px;
-}
-
 /*логотип и его порядок размещения*/
 .logo {
-max-width: 140px;
+position: absolute;
+transform: translate(50%, -1px);
+right: 50%;
+max-width: 139px;
 width: 100%;
 }
 
-/*Индекс страница*/
+
+/*----------Индекс страница-----------*/
 .main-picture{
-margin-top: -2px;
+margin-top: -1 px;
 background-color: #375466 ;
 background-image: url("../img/canyon.jpg");
 background-position: 50% -84px;
@@ -82,7 +89,7 @@ background-repeat: no-repeat;
 background-size: 100%;
 }
 
-h1{
+.hidden{
 visibility: hidden;
 }
 
@@ -108,6 +115,8 @@ margin-top: -7px;
 padding: 44px;
 text-align: center;
 height:129px;
+display: flex;
+flex-direction: column;
 }
 
 p{
@@ -115,72 +124,101 @@ font-size: 14px;
 font-weight: 200;
 }
 
-.line1, .line3{
-margin: 0;
+.feature{
+margin-top:-60px;
+}
+.feature-list{
+padding:0px;
+margin: 0px;
 display: flex;
-justify-content: flex-start;
-height:256px;
-width: 100%;
+flex-wrap: wrap;
+box-sizing:content-box;
 }
-
-.reason1, .reason2{
-background-color: #81b3d2;
-color: #ffffff;
+.feature-item, .second-item{
+width:100%;
+display:flex;
+flex-wrap: wrap;
+}
+.first, .second{
+height: 255px;
+width: 400px;
 text-align: center;
-width: 360px;
-padding: 20px;
+align-items:center;
+background-color:#81b3d2;
+color:#ffffff;
+display: flex;
+flex-direction: column;
 }
-.picture1{
-width: 800px;
-height:100%;
+.first h3, .third h3, .fourth h3, .fifth h3{
+width: 130px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 43px;
+}
+.first p{
+width:300px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0px;/*
+margin-bottom: 0px;*/
+}
+.second p{
+width:307px;
+}
+.third p, .fourth p, .fifth p{
+width: 265px;
+margin-left: auto;
+margin-right: auto;
+}
+.street{
+width:800px;
+box-sizing:border-box;
 background:url('../img/picture1.png') no-repeat;
 background-size: 800px 400px;
 background-position: top -78px right 0px, center;
-
 }
-.picture2{
-width: 800px;
-height:100%;
+.item-list{
+padding:0px;
+margin: 0px;
+display: flex;
+flex-basis: 100%;
+text-align: center;
+justify-content:space-around;
+align-items:center;
+height: 329px;
+}
+.item-list p{
+width:305px;
+align-items:center;
+}
+.nature{
+width:800px;
+box-sizing:border-box;
 background:url('../img/picture2.png') no-repeat;
 background-size: 800px 400px;
-background-position: top -77px right 0px, center;
-}
-li{
-flex-basis:33%;
-display: flex;
-justify-content: space-evenly;
+background-position: top -75px right 0px, center;
 }
 
-.line2{
-display: flex;
-justify-content: space-evenly;
-height: 329px;
-background-color: #ffffff;
-}
-.block{
-margin:40px;;
-text-align: center; 
-}
-.line4{
-display: flex;
-justify-content: space-evenly;
-height: 255px;
-background-color: #eeeeee;
-}
-.reason3, .reason4, .reason5{
-margin:10px;
-text-align: center; 
+.third, .fourth, .fifth{
+width: 400px;
+text-align: center;
+align-content:center;
+align-items: center;
+background:#eeeeee;
+height:258px;
 }
 
-.reserve{
+
+.search{
 height: 270px;
 text-align: center;
 }
 
 .interesting{
 font-size: 26px;
-padding-top: 45px;
+padding-top: -10px;
 }
+
 
 /*страница отелей*/
 .category{
@@ -220,23 +258,80 @@ background: #766357;
 }
 
 
-/*оформление формы*/
+/*----------оформление формы------------*/
 form{
 width: 570px;
 height:396px;
-margin: 0 auto;
-padding: 20px;
+right: 50%;
+transform: translate(50%, -1px);
+margin-top: -2px;
+padding: 0px;
 background-color: #ffffff;
-border: 1px solid;
+position: absolute;
+display:flex;
+/*flex-direction:column;*/
+flex-wrap:wrap;
+box-sizing:border-box;
+border: 1px solid grey;
 }
-label {
-display: block;
-margin-bottom: 5px;
+.fill{
+display: flex;
+/*flex-direction:column;*/
+flex-wrap:wrap;
+box-sizing: border-box;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+}
+form div{
+/*margin-left: auto;
+margin-right: auto;*/
+width: 460px;
+height: 50px;
+display: flex;
+}
+.adults,.childs{
+width: 230px;
+}
+.form-row{
+display:flex;
+}
+.row-item{
+width: 36px;
+height:36px;
+margin:0px;
+padding:0px;
+}
+.form-row input, .form-row button{
+width: 36px;
+height:36px;
+margin:0px;
+padding:0px;
+background: #f2f2f2;
+border:0px;
+}
+.choice{
+display:flex;
+}
+.choice input, .choice button{
+height: 36px;
+margin:0px;
+padding:0px;
+background: #f2f2f2;
+border: 0px;
+}
+.choice input{
+width:285px;
+}
+.choice button{
+width: 36px;
 }
 .choose-data {
 background-color: #766357;
 height:86px;
-width: 568px;
+width: 570px;
 color: #ffffff;
 font-size: 20px;
 font-weight:700;
@@ -280,32 +375,49 @@ margin-top: -2px;
 footer{
 height: 120px;
 display: flex;
-justify-content: space-around;
+
+align-items: center;
 }
 
 .academy {
-text-align: center; 
-margin-top:20px;
+width:300px;
+display: flex;
+align-items: center;
+padding-left: 100px;
+
+
+}
+.academy svg{
+width: 120px;
+align-items: center;
+}
+.visit{
+width: 400px;
 }
 .visit p{
 font-size: 21px;
 font-weight: 1000;
-margin-top:38px;
-margin-left: -7px;
+width:135px;
+margin-left: auto;
+margin-right: auto;
+
 }
 
 .social{
 display: flex;
-justify-content: space-evenly;
-margin-top: 27px;
-margin-left:10px;
+justify-content: center;
+width:400px;
+padding-left:0px;
 }
 
 .social li{
-border: 1px solid;
-border-color: #81b3d2;
+display:flex;
+align-items:center;
 background-color: #81b3d2;
-padding: 10px;
+margin: 3px;
+width:34px;
+height: 48px;
+padding-left: 14px;
 }
 .social li:hover{
 background-color:#669ec0;
