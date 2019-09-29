@@ -1,3 +1,4 @@
+
 /*css style of Sedona*/
 body {
 margin: 0;
@@ -54,7 +55,6 @@ list-style: none;
 display: flex;
 justify-content: space-around;
 }
-
 .site-navigation li{
 line-height:53px;
 }
