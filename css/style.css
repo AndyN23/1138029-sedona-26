@@ -417,7 +417,7 @@ background: #ffffff;
 height: 61px;
 display: flex;
 margin-left:72px;
-flex-direction: row;
+flex-direction:row;
 margin-top: 13px;
 margin-bottom:13px;
 }
