@@ -328,12 +328,9 @@ height: 23px;
 background-image: url(../img/svg/checkbox-on.svg);
 background-repeat: no-repeat;
 }
-
-
 .filter-input-checkbox:disabled + label::before {
 background-image: url(../img/svg/checkbox-off-disabled.svg);
 }
-
 .filter-input-checkbox:checked:disabled + label::after {
 background-image: url(../img/checkbox-on-disabled.svg);
 }
