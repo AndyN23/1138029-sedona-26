@@ -106,7 +106,7 @@ header{
 .main-picture{
  margin-top: -1 px;
  background-color: #375466 ;
- background-image: url("../img/canyon.jpg");
+ background-image: url('../img/canyon.jpg');
  background-position: 50% -84px;
  background-repeat: no-repeat;
  background-size: 100%;
@@ -442,7 +442,7 @@ letter-spacing: 0.1px;
             transform: translateY(-50%);
  width: 23px;
  height: 23px;
- background-image: url(../img/svg/checkbox-off.svg);
+ background-image: url('../img/svg/checkbox-off.svg');
  background-repeat: no-repeat;
 }
 
@@ -456,16 +456,16 @@ letter-spacing: 0.1px;
              transform: translateY(-50%);
  width: 27px;
  height: 23px;
- background-image: url(../img/svg/checkbox-on.svg);
+ background-image: url('../img/svg/checkbox-on.svg');
  background-repeat: no-repeat;
 }
 
 .filter-input-checkbox:disabled + label::before {
- background-image: url(../img/svg/checkbox-off-disabled.svg);
+ background-image: url('../img/svg/checkbox-off-disabled.svg');
 }
 
 .filter-input-checkbox:checked:disabled + label::after {
- background-image: url(../img/checkbox-on-disabled.svg);
+ background-image: url('../img/checkbox-on-disabled.svg');
 }
 
 /*сложный фильтр*/
@@ -618,7 +618,7 @@ color: #000000;
  display: flex;
  justify-content: flex-start ;
  background-color: #81b3d2;
- background-image: url("../img/background-filter.jpg");
+ background-image: url('../img/background-filter.jpg');
  background-position: center center;
  background-size: 100%;
 }
