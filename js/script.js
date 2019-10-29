@@ -5,10 +5,10 @@ form.classList.remove('nojs');
   
 button.addEventListener('click', function (evt) {
 evt.preventDefault();
-form.classList.toggle('hiden');
+form.classList.toggle('hidden');
 });
 
-var dateOfArrival = form.querySelector("[name=date-of-arrival]");
+var dateOfArrival = form.querySelector('[name=date-of-arrival]');
 
 var minus = document.querySelector('.minus');
 var plus = document.querySelector('.plus');
@@ -17,11 +17,11 @@ var minusKids = document.querySelector('.number-of-kids .minus');
 var plusKids = document.querySelector('.number-of-kids .plus');
 var resultKids = document.querySelector('.number-of-kids .number');
 
-form.classList.add("search-form-hide");
+form.classList.add('search-form-hide');
 
-button.addEventListener("click",function(e){
+button.addEventListener('click', function(e){
 e.preventDefault();
-form.classList.toggle("search-form-show");
+form.classList.toggle('search-form-show');
 dateOfArrival.focus();
 });
 
