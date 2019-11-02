@@ -628,10 +628,12 @@ fieldset.range{
  height: 34px;
 }
 
-.button.button-form:hover{
+.button.button-form:hover,
+.button.button-form:focus{
  background: #ffffff;
  border: 2px solid #ffffff;
  color: #000000;
+ outline:none;
 }
 
 .category{
@@ -1034,7 +1036,7 @@ form button[type='submit']:active{
  color: #88b6d1;
 }
 
-.search-form-show{
+.search-form{
  display: block;
     -webkit-animation: bounce .8s;
             animation: bounce .8s;
@@ -1239,8 +1241,8 @@ button, input{
 .flex-row{
  margin-left: 35px;
  margin-right: 35px;
- width: 460px;
 }
+
 .plus-minus{
  position: relative;
  top: 0;
